@@ -1,0 +1,36 @@
+{
+  "name": "chat-js-apps",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "start:agent": "cd packages/agent && yarn start",
+    "start:customer": "cd packages/customer && yarn start",
+    "start:widgets": "cd packages/widgets && yarn start",
+    "start:storybook": "cd packages/widgets && yarn storybook",
+    "start:core": "cd packages/core && yarn start",
+    "build:core": "cd packages/core && yarn build",
+    "build:widgets": "cd packages/widgets && yarn build",
+    "test:agent": "cd packages/agent &&  yarn test",
+    "test:core": "cd packages/core && yarn test",
+    "test:customer": "cd packages/customer && yarn test",
+    "test:widgets": "cd packages/widgets && yarn test",
+    "test": "yarn test:agent && yarn test:core && yarn test:customer && yarn test:widgets",
+    "clean:all": "rm -rf packages/*/node_modules && rm -rf node_modules",
+    "lint": "eslint packages --ext .js,.jsx",
+    "lint-fix": "eslint --fix packages --ext .js,.jsx"
+  },
+  "keywords": [],
+  "author": "SirSerje",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "5.16.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "2.17.3",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "7.13.0",
+    "lerna": "^3.14.1"
+  },
+  "dependencies": {
+    "global": "4.3.2"
+  }
+}
